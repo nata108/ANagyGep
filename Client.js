@@ -1,5 +1,5 @@
-import Websocket from "ws";
-import readline from "readline";
+const {WebSocket} = require("ws");
+const readline = require("readline");
 
 
 
@@ -19,7 +19,7 @@ const readsend = ()=>{
     });
 }
 
-const client = new Websocket("ws:"+myArgs[0]+":7071");
+const client = new WebSocket("ws:"+myArgs[0]+":7071");
 client.on('open', ()=>{console.log("Connected to NagyGép!")
     client.send(myArgs[1])
 readsend()

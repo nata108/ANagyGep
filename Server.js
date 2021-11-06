@@ -1,4 +1,4 @@
-import {WebSocketServer} from "ws";
+const {WebSocketServer}=require("ws");
 
 var myArgs = process.argv.slice(2)
 
